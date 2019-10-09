@@ -1,0 +1,14 @@
+setup:
+  kibana.host: "kibana:5601"
+  dashboards.enabled: true
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+
+filebeat:
+  inputs:
+    - type: container
+      enabled: true
+      stream: all
+      paths:
+        - '/var/lib/docker/containers/*/*.log'
