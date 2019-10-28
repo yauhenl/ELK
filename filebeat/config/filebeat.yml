@@ -1,7 +1,3 @@
-setup:
-  kibana.host: "kibana:5601"
-  dashboards.enabled: true
-
 output.elasticsearch:
   hosts: ["elasticsearch:9200"]
 
