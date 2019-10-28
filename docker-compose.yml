@@ -30,6 +30,7 @@ services:
       - ./filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock
+      - /var/log/ipeoplecloud:/var/log/ipeoplecloud
     user: root
     command: filebeat -e -strict.perms=false
     networks:

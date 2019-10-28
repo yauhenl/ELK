@@ -7,8 +7,9 @@ output.elasticsearch:
 
 filebeat:
   inputs:
-    - type: container
+    - type: log
+      json.keys_under_root: true
       enabled: true
       stream: all
       paths:
-        - '/var/lib/docker/containers/*/*.log'
+        - /var/log/ipeoplecloud/*/*.log
