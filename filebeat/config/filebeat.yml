@@ -12,4 +12,4 @@ filebeat:
       enabled: true
       stream: all
       paths:
-        - /var/log/ipeoplecloud/*/*.log
+        - /var/log/ipeoplecloud/*.log
